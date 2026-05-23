@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 
-const COLORS = ["#FFCA27", "#F9550D", "#77C4D1", "#FFEDB2", "#918726", "#FFFFFF", "#202F1D"];
+function randomHex() {
+  return "#" + Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, "0");
+}
 
 export default function HeroLogo() {
-  const [colorIndex, setColorIndex] = useState(0);
+  const [accentColor, setAccentColor] = useState("#FFCA27");
 
   const handleClick = () => {
-    setColorIndex((i) => (i + 1) % COLORS.length);
+    setAccentColor(randomHex());
   };
-
-  const accentColor = COLORS[colorIndex];
 
   return (
     <svg
