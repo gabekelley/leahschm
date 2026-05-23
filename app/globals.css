@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  /* Semantic color tokens */
+  --color-poppy: #F9550D;
+  --color-blue: #77C4D1;
+  --color-sun: #FFCA27;
+  --color-butter: #FFEDB2;
+  --color-green: #918726;
+  --color-white: #FFFFFF;
+  --color-evergreen: #202F1D;
+  --color-spruce: #187571;
+
+  /* Legacy aliases — keep so existing Tailwind classes don't break */
+  --color-cream: #FFEDB2;
+  --color-orange: #F9550D;
+  --color-dark: #202F1D;
+  --color-yellow: #FFCA27;
+  --color-teal: #77C4D1;
+
+  /* Fonts */
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-azeret-mono);
+  --font-heading: var(--font-old-standard);
+}
+
+body {
+  background-color: #FFEDB2;
+  color: #202F1D;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  cursor: url('/cursor.svg') 6 4, auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, button, [role="button"], input, select, label {
+  cursor: url('/cursor-hover.svg?v=2') 11 11, pointer;
+}
+
+/* ── Typography utilities ── */
+
+.headline-l {
+  font-family: var(--font-old-standard);
+  font-size: 46px;
+  line-height: 60px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .headline-l {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.headline-m {
+  font-family: var(--font-old-standard);
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .headline-m {
+    font-size: 46px;
+    line-height: 60px;
+  }
+}
+
+.headline-s {
+  font-family: var(--font-old-standard);
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.body-l {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #202F1D;
+}
+
+.body-m {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.body-s {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+}
+
+.button-l {
+  font-family: var(--font-azeret-mono);
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.button-m {
+  font-family: var(--font-azeret-mono);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+}
+
+.button-s {
+  font-family: var(--font-azeret-mono);
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+/* WIP banner marquee */
+@keyframes wip-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Underline on hover for button-style interactive elements, excluding pills */
+.button-l a:hover, .button-l button:hover,
+.button-m a:hover, .button-m button:hover,
+a.button-l:hover, button.button-l:hover,
+a.button-m:hover, button.button-m:hover {
+  text-decoration: underline;
+}
+.rounded-full:hover,
+.button-l.rounded-full:hover,
+.button-m.rounded-full:hover,
+.button-s.rounded-full:hover {
+  text-decoration: none !important;
+}
+
+/* Legacy alias — same as headline-m */
+/* Butter cursors for dark backgrounds */
+.dark-bg {
+  cursor: url('/cursor-butter.svg') 6 4, auto;
+}
+
+.dark-bg a,
+.dark-bg button,
+.dark-bg [role="button"],
+.dark-bg input,
+.dark-bg select,
+.dark-bg label {
+  cursor: url('/cursor-hover-butter.svg') 11 11, pointer;
+}
+
+.copy-playfair {
+  font-family: var(--font-old-standard);
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .copy-playfair {
+    font-size: 46px;
+    line-height: 60px;
+  }
+}
