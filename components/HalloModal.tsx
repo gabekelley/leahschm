@@ -42,7 +42,7 @@ export default function HalloModal({ isOpen, onClose }: HalloModalProps) {
       >
         {/* Scrollable content */}
         <div className="overflow-y-auto flex-1">
-        <div className="px-16 pb-16 pt-16">
+        <div className="p-8 md:p-16">
           {/* Portrait row: portrait left, close button right, top-aligned */}
           <div className="flex items-start justify-between mb-12">
             <div
