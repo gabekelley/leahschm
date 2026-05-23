@@ -1,6 +1,6 @@
 "use client";
 
-const LABEL = "WORK IN PROGRESS";
+const LABEL = "UNDER CONSTRUCTION";
 const COUNT = 30;
 
 const labelStyle: React.CSSProperties = {
